@@ -1,68 +1,124 @@
-# Christmas Movie Picker Dashboard
+# Christmas Movie Picker | Power BI Dashboard
+### Project Overview
 
-## Project Overview
-**Christmas Movie Picker** is an interactive **Power BI dashboard** designed to help users discover and filter Christmas-themed movies based on their preferences.
-Using an intuitive set of slicers and visuals, users can explore movies by **genre**, **rating**, **IMDb score**, **runtime**, and **popularity (votes)** to quickly decide what to watch during the holiday season.
+**Christmas Movie Picker** is an interactive **Power BI dashboard** designed to help users discover Christmas-themed movies based on their preferences.
+The project walks through the complete Power BI workflow - from importing raw data to cleaning, modeling, visualization, and interactivity - using a real-world movie dataset.
 
-This project demonstrates end-to-end Power BI skills including data modeling, visualization design, slicers, and user-driven interactivity.
-
----
-
-## Objective
-
-The main goals of this project are to:
-- Provide a **movie recommendation-style experience** using Power BI
-- Allow users to dynamically filter Christmas movies based on personal preferences
-- Showcase clean dashboard design and effective use of Power BI visuals
-- Practice working with a real-world CSV dataset and transforming it into insights
+The dashboard enables users to filter movies by **genre**, **rating**, **IMDb rating range**, **runtime**, and **popularity (votes)**, making it easy to find a suitable movie for the holiday season.
 
 ---
 
-## Dashboard Features
-### Interactive Filters (Slicers):
-The dashboard includes multiple slicers that allow real-time filtering.
-- **Genre**: Filter movies by genre (Comedy, Family, Drama, Animation, etc.)
-- **Rating**: Filter by movie certification/rating
-- **IMDb Rating (Range)**: Adjustable slider to select movies within a rating range
-- **Runtime (Minutes)**: Slider to control movie length (e.g., short films vs feature-length)
+### Project Goals
+This project was created to:
+- Practice **core Power BI skills** in an end-to-end scenario
+- Learn **data cleaning** and **transformation** using Power Query
+- Build **interactive dashboards** with slicers and visuals
+- Apply **analytical decision-making**, such as choosing the right popularity metric
+- Design a clean, user-friendly report layout
 
-These slicers update all visuals simultaneously, enabling an interactive exploration experience.
+---
 
+### Dataset Description
+
+File: `christmas_movies.csv`
+
+The dataset is a CSV export of **Christmas-related movies from IMDb**, primarily covering releases between 2016 and 2022.
+
+Key Columns Used:
+- `Title` – Movie name
+- `Rating` – Movie / TV certification
+- `Runtime` – Duration in minutes
+- `IMDb Rating` – Average IMDb score
+- `Genre` – One or more genres (comma-separated)
+- `Released` – Release year
+- `Director` – Movie director
+- `Stars` – Lead actors
+- `Votes` – Number of IMDb votes
+
+During initial exploration, several data quality issues were identified, such as inconsistent ratings, blank values, and multiple genres stored in a single column.
+
+---
+
+## Data Preparation & Cleaning (Power Query)
+
+All data transformation steps were performed using **Power Query Editor**.
+
+### Genre Normalization:
+- The `Genre` column often contained multiple values separated by commas
+- The column was split into: `Genre.1`, `Genre.2`, etc.
+- `Genre.1` was selected as the **primary genre** and used in visuals and slicers
+
+This approach simplified filtering while retaining meaningful genre information.
+
+### Rating Consolidation:
+
+The original dataset included many inconsistent or outdated ratings, such as:
+- `TV-14`, `TV-G`, `TV-PG`, `TV-MA`
+- `Approved`, `Passed`, `Not Rated`, and blanks
+
+These were standardized into common movie ratings:
+
+| Original Rating              | Standardized Rating |
+| ---------------------------- | ------------------- |
+| TV-14                        | PG-13               |
+| TV-G                         | G                   |
+| TV-PG                        | PG                  |
+| TV-MA                        | R                   |
+| Approved / Not Rated / Blank | Unrated             |
+
+This cleanup ensures consistent filtering and better user experience.
+
+### Popularity Metric Selection:
+
+Although **IMDb Rating** is included, the **Votes** column was chosen as the primary indicator of popularity.
+
+Votes provide a stronger signal of audience engagement and are used to rank movies in the dashboard.
+
+---
+
+## Dashboard Components
 ### Movies Table:
-A central table displays the filtered list of movies with the following details:
-- Title
-- Genre
-- Director
-- Release Year
-- Number of Votes
+A central table displays detailed information for each movie:
 
-This table updates dynamically based on slicer selections, allowing users to browse and compare movies easily.
+**Title, Primary Genre, Director, Release Year, Votes, Lead Actors**
+
+Formatting choices:
+- Column headers cleaned and renamed
+- `Release Year` and `Votes set` to **"Don't summarize"**
+- Table dynamically updates based on all slicer selections
 
 ### Top 5 Movies by Votes:
+A **clustered column chart** shows the **Top 5 most popular movies** based on vote count:
+- **X-axis:** Movie Title
+- **Y-axis:** Votes
+- Green bars with data labels for clarity
 
-A bar chart highlights the **Top 5 most-voted Christmas movies**, helping users identify the most popular titles at a glance.
-From the dashboard, examples of highly voted movies include:
-- Die Hard
-- Silver Linings Playbook
-- Home Alone
-- Love Actually
-- Edward Scissorhands
+The chart automatically recalculates when filters are applied, helping users quickly identify popular options.
 
-This visual emphasizes popularity as a decision-making factor.
+
+### Interactive Filters (Slicers)
+Four slicers allow users to personalize their movie search:
+- **Genre**
+  - Dropdown slicer using the primary genre
+- **Rating**
+  - Dropdown slicer with standardized ratings:
+    - G, PG, PG-13, R, Unrated
+- **IMDb Rating (Range)**
+  - Slider to define minimum and maximum IMDb rating
+- **Runtime (Minutes)**
+  - Slider to filter movies by duration
+
+All slicers are consistently styled and interact with every visual on the report.
 
 ---
-## Dataset Information
 
-The project uses a CSV dataset: `christmas_moveis.csv`
+## Dashboard Interactivity
 
-The columns contain movie-level attributes such as:
-- `Title` – Movie name
-- `Genre` – Movie genre
-- `Director` – Director name
-- `Released` – Release year
-- `Rating` – Movie certification
-- `IMDB Rating` – IMDb score
-- `Runtime` – Duration in minutes
-- `Votes` – Number of user votes
+Users can:
+- Adjust slicers to define preferences
+- Instantly see the filtered movie list
+- Identify the most popular movies within their criteria
+
+This demonstrates how Power BI supports **exploratory analysis** and **decision-making** through interactive visuals.
 
 ---
