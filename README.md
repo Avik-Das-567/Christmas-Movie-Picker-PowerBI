@@ -9,7 +9,7 @@ The dashboard enables users to filter movies by **genre**, **rating**, **IMDb ra
 ---
 
 ### Project Goals
-This project was created to:
+I built this project to:
 - Practice **core Power BI skills** in an end-to-end scenario
 - Learn **data cleaning** and **transformation** using Power Query
 - Build **interactive dashboards** with slicers and visuals
