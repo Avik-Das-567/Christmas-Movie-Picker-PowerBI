@@ -19,7 +19,6 @@ This project was created to:
 ---
 
 ### Dataset Description
-
 File: `christmas_movies.csv`
 
 The dataset is a CSV export of **Christmas-related movies from IMDb**, primarily covering releases between 2016 and 2022.
@@ -40,9 +39,7 @@ During initial exploration, several data quality issues were identified, such as
 ---
 
 ## Data Preparation & Cleaning (Power Query)
-
 All data transformation steps were performed using **Power Query Editor**.
-
 ### Genre Normalization:
 - The `Genre` column often contained multiple values separated by commas
 - The column was split into: `Genre.1`, `Genre.2`, etc.
@@ -96,7 +93,7 @@ A **clustered column chart** shows the **Top 5 most popular movies** based on vo
 The chart automatically recalculates when filters are applied, helping users quickly identify popular options.
 
 
-### Interactive Filters (Slicers)
+### Interactive Filters (Slicers):
 Four slicers allow users to personalize their movie search:
 - **Genre**
   - Dropdown slicer using the primary genre
@@ -113,12 +110,29 @@ All slicers are consistently styled and interact with every visual on the report
 ---
 
 ## Dashboard Interactivity
-
 Users can:
 - Adjust slicers to define preferences
 - Instantly see the filtered movie list
 - Identify the most popular movies within their criteria
 
 This demonstrates how Power BI supports **exploratory analysis** and **decision-making** through interactive visuals.
+
+---
+
+## Key Learnings
+This project helped reinforce:
+- Data cleaning and transformation techniques
+- Handling inconsistent categorical data
+- Designing intuitive, interactive dashboards
+- Choosing meaningful metrics for analysis
+- Structuring beginner-friendly Power BI projects
+
+---
+
+## Conclusion
+
+The **Christmas Movie Picker** project demonstrates how Power BI can be used beyond business reporting - applying analytics to entertainment and everyday choices.
+
+It serves as a strong portfolio project showcasing data preparation, visualization, and interactive dashboard design.
 
 ---
