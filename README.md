@@ -19,9 +19,10 @@ This project was created to:
 ---
 
 ### Dataset Description
-File: `christmas_movies.csv`
 
-The dataset is a CSV export of **Christmas-related movies from IMDb**, primarily covering releases between 2016 and 2022.
+Link: https://www.kaggle.com/datasets/jonbown/christmas-movies
+
+The dataset `christmas_movies.csv` is a collection of **Christmas-related movies from IMDb**.
 
 Key Columns Used:
 - `Title` – Movie name
