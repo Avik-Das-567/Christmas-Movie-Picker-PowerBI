@@ -132,8 +132,6 @@ This project helped reinforce:
 
 ## Conclusion
 
-The **Christmas Movie Picker** project demonstrates how Power BI can be used beyond business reporting - applying analytics to entertainment and everyday choices.
-
-It serves as a strong portfolio project showcasing data preparation, visualization, and interactive dashboard design.
+The **Christmas Movie Picker** project demonstrates how Power BI can be used beyond business reporting - applying analytics to entertainment and everyday choices. It showcases data preparation, visualization, and interactive dashboard design.
 
 ---
