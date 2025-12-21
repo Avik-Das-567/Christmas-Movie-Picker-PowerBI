@@ -1,5 +1,5 @@
 # Christmas Movie Picker | Power BI Dashboard
-### Project Overview
+## Project Overview
 
 **Christmas Movie Picker** is an interactive **Power BI dashboard** designed to help users discover Christmas-themed movies based on their preferences.
 The project walks through the complete Power BI workflow - from importing raw data to cleaning, modeling, visualization, and interactivity - using a real-world movie dataset.
@@ -8,7 +8,7 @@ The dashboard enables users to filter movies by **genre**, **rating**, **IMDb ra
 
 ---
 
-### Project Goals
+## Project Goals
 I built this project to:
 - Practice **core Power BI skills** in an end-to-end scenario
 - Learn **data cleaning** and **transformation** using Power Query
@@ -18,7 +18,7 @@ I built this project to:
 
 ---
 
-### Dataset Description
+## Dataset Description
 
 Link: https://www.kaggle.com/datasets/jonbown/christmas-movies
 
