@@ -1,10 +1,7 @@
 # Christmas Movie Picker | Power BI Dashboard
 ## Overview
 
-**Christmas Movie Picker** is an interactive **Power BI dashboard** designed to help users discover Christmas-themed movies based on their preferences.
-The project walks through the complete Power BI workflow - from importing raw data to cleaning, modeling, visualization, and interactivity - using a real-world movie dataset.
-
-The dashboard enables users to filter movies by **genre**, **rating**, **IMDb rating range**, **runtime**, and **popularity (votes)**, making it easy to find a suitable movie for the holiday season.
+**Christmas Movie Picker** is an interactive **Power BI dashboard** designed to help users discover Christmas-themed movies based on their preferences. The project walks through the complete Power BI workflow - from importing raw data to cleaning, modeling, visualization, and interactivity - using a real-world movie dataset. The dashboard enables users to filter movies by **genre**, **rating**, **IMDb rating range**, **runtime**, and **popularity (votes)**, making it easy to find a suitable movie for the holiday season.
 
 ---
 
